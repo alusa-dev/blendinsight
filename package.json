@@ -1,6 +1,34 @@
 {
+  "name": "blend-insight-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "start": "next start",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "db:generate-encryption-key": "node -e \"console.log(require('node:crypto').randomBytes(32).toString('base64'))\""
+  },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "@neondatabase/serverless": "^1.0.2",
     "@neon/config": "^1.7.3",
-    "@neon/env": "^1.4.4"
+    "@neon/env": "^1.4.4",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
   }
 }
