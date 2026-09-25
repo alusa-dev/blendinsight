@@ -11,6 +11,12 @@ export default function HomePage() {
       <p>Servidor MCP pessoal para conectar o Instagram profissional ao ChatGPT.</p>
       <p>Endpoint MCP: <code>{endpoint}</code></p>
       <p>Conecte este servidor como um aplicativo MCP nas configurações do ChatGPT.</p>
+      <nav aria-label="Informações do serviço" style={{ display: "flex", flexWrap: "wrap", gap: 16, marginTop: 40, fontSize: 14 }}>
+        <a href="/privacy">Política de Privacidade</a>
+        <a href="/terms">Termos de Serviço</a>
+        <a href="/data-deletion">Exclusão de dados</a>
+        <a href="/support">Suporte</a>
+      </nav>
     </main>
   );
 }

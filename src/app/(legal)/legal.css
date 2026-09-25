@@ -1,0 +1,220 @@
+.legal-shell {
+  --legal-ink: #202821;
+  --legal-muted: #647067;
+  --legal-line: #d9ddd7;
+  --legal-accent: #42664f;
+  min-height: 100vh;
+  padding: 0 28px 32px;
+  color: var(--legal-ink);
+  background: #f3f4ef;
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+
+.legal-header,
+.legal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.legal-header {
+  min-height: 78px;
+  border-bottom: 1px solid var(--legal-line);
+}
+
+.legal-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--legal-ink);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.legal-mark {
+  display: grid;
+  width: 31px;
+  height: 31px;
+  place-items: center;
+  border-radius: 9px 9px 9px 2px;
+  color: #f7f8f2;
+  background: var(--legal-accent);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.legal-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 22px;
+}
+
+.legal-nav a,
+.legal-footer a {
+  color: var(--legal-muted);
+  font-size: 12px;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+.legal-nav a:hover,
+.legal-footer a:hover {
+  color: var(--legal-accent);
+  text-decoration-color: currentColor;
+}
+
+.legal-paper {
+  width: min(100%, 850px);
+  margin: 64px auto 68px;
+  padding: clamp(28px, 6vw, 68px) clamp(22px, 7vw, 76px) 70px;
+  border: 1px solid #e3e6e0;
+  background: #fbfcf8;
+  box-shadow: 0 18px 60px rgba(32, 40, 33, 0.045);
+}
+
+.legal-heading {
+  max-width: 650px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--legal-line);
+}
+
+.legal-eyebrow,
+.legal-date,
+.legal-body h2,
+.legal-contact-label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.legal-eyebrow {
+  margin: 0 0 18px;
+  color: var(--legal-accent);
+  font-size: 10px;
+}
+
+.legal-eyebrow span {
+  padding: 0 4px;
+  color: #a9b4a9;
+}
+
+.legal-heading h1 {
+  max-width: 650px;
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: clamp(40px, 7vw, 66px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.legal-intro {
+  max-width: 590px;
+  margin: 24px 0 18px;
+  color: #4c594e;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.legal-date {
+  margin: 0;
+  color: #879087;
+  font-size: 9px;
+}
+
+.legal-body {
+  max-width: 650px;
+  padding-top: 12px;
+}
+
+.legal-body section {
+  padding: 25px 0 23px;
+  border-bottom: 1px solid #e8ebe5;
+}
+
+.legal-body section:last-child {
+  border-bottom: 0;
+}
+
+.legal-body h2 {
+  margin: 0 0 12px;
+  color: var(--legal-accent);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.legal-body p,
+.legal-body li {
+  color: #39443b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.legal-body p {
+  margin: 0 0 12px;
+}
+
+.legal-body p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-body ul,
+.legal-body ol {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+.legal-body a {
+  color: var(--legal-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.legal-callout {
+  margin-top: 18px;
+  padding: 17px 19px;
+  border-left: 2px solid var(--legal-accent);
+  background: #f1f4ed;
+}
+
+.legal-callout p {
+  font-size: 13px;
+}
+
+.legal-contact-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #879087;
+  font-size: 9px;
+}
+
+.legal-footer {
+  padding-top: 20px;
+  border-top: 1px solid var(--legal-line);
+  color: var(--legal-muted);
+  font-size: 11px;
+}
+
+@media (max-width: 680px) {
+  .legal-shell { padding: 0 16px 24px; }
+  .legal-header { align-items: flex-start; flex-direction: column; padding: 19px 0; }
+  .legal-nav { justify-content: flex-start; gap: 9px 15px; }
+  .legal-paper { margin: 28px auto 40px; padding: 30px 22px 38px; }
+  .legal-footer { align-items: flex-start; flex-direction: column; gap: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .legal-nav a,
+  .legal-footer a { transition: none; }
+}
