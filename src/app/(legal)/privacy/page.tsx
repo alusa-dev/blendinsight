@@ -37,7 +37,7 @@ export default function PrivacyPage() {
       <section>
         <h2>3 · Finalidades e armazenamento</h2>
         <p>Usamos esses dados para conectar a conta autorizada, executar as operações escolhidas pelo usuário no ChatGPT, manter tokens atualizados, validar permissões e proteger o serviço contra abuso.</p>
-        <p>Os tokens Meta são cifrados antes de serem armazenados. Tokens OAuth do cliente MCP são guardados como hashes. Eventos recebidos por webhook são cifrados no banco e mantidos na caixa de entrada operacional por até 90 dias; eventos mais antigos são removidos durante a manutenção do inbox.</p>
+        <p>Os tokens Meta são cifrados antes de serem armazenados. Tokens OAuth do cliente MCP são guardados como hashes. Eventos recebidos por webhook são cifrados no banco e mantidos na caixa de entrada operacional. O serviço remove eventos com mais de 90 dias ao processar novas entregas; se a conta ficar inativa, essa limpeza pode acontecer depois desse período. Você pode solicitar a remoção antes disso pela página de exclusão de dados.</p>
         <p>O Blend Insight não mantém uma cópia permanente de respostas de métricas ou de conteúdo obtidas sob demanda, salvo quando um evento de webhook precisa ficar disponível na caixa de entrada para consulta. Solicitações e respostas MCP não são salvas como histórico de conversa no banco do serviço.</p>
       </section>
 
